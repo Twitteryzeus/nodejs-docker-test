@@ -1,11 +1,11 @@
 # specify the node base image with your desired version node:<version>
 FROM node:18-alpine
 
-# ENV DIRPATH = . 
+# Set the working directory in the container
+WORKDIR /
 
-# WORKDIR $DIRPATH
-
-# RUN pwd
+# Copy the current directory contents into the container at /app
+COPY . /
 
 # replace this with your application's default port
 EXPOSE 3000
