@@ -8,3 +8,11 @@ services:
     build: 
       context: ./
       dockerfile: ./Dockerfile
+  
+  mongo:
+    image: mongo:7.0.6
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+    expose:
+      - 27017:27017
